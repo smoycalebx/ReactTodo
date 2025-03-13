@@ -23,7 +23,7 @@ function Prueba() {
       />
 
       <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 1 }}>
-        <h1 style={{ color: "white", textAlign: "center", paddingTop: "20%" }}>Bienvenido a MoochisCars</h1>
+        <h1 style={{ color: "white", textAlign: "center", paddingTop: "20%" }}>hola</h1>
       </div>
     </div>
 

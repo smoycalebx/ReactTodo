@@ -26,13 +26,12 @@ function FormInicio() {
   const Click = async () => {
     if (editandoId) {
       console.log(editandoId);
-      
+          //Para devolver los datos al input y Actualizarlos
       await Llamados.updateUsers(Nombre, Apellido, Cedula, Contraseña, editandoId );
       setEditandoId(null);
       
     } else {
-      let cedStr = Cedula.toString();
-      await Llamados.postUsers(Nombre, Apellido, cedStr, Contraseña);
+      await Llamados.postUsers(Nombre, Apellido, Cedula, Contraseña);
     }
     actualizarLista();
     limpiarCampos();
@@ -89,7 +88,7 @@ function FormInicio() {
       <div className='divRest'>
         {Formulario.length > 0 ? (
           Formulario.map((usuario) => (
-            <div key={usuario.id} className='usuario-item'>
+            <div key={usuario.id}>
               <p>Nombre: {usuario.nombre}</p>
               <p>Apellido: {usuario.apellido}</p>
               <p>Cédula: {usuario.cedula}</p>
